@@ -18,3 +18,11 @@ export type NavLink = {
   label: string;
   href: string;
 };
+
+export type Todo = {
+  id: number;
+  text: string;
+  completed: boolean;
+  priority: 'low' | 'medium' | 'high';
+  createdAt: Date;
+};
