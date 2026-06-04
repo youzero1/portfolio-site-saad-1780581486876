@@ -1,5 +1,7 @@
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 
+const AVATAR_URL = 'https://xjsyjqzrtpgndomemxcg.supabase.co/storage/v1/object/public/prompt-images/build-images/1780582237593-user1.jpeg';
+
 export default function Hero() {
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -14,8 +16,12 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         {/* Avatar */}
         <div className="flex justify-center mb-8">
-          <div className="w-32 h-32 rounded-full bg-gradient-to-br from-brand to-accent flex items-center justify-center text-5xl font-bold text-white shadow-2xl">
-            JD
+          <div className="w-32 h-32 rounded-full overflow-hidden shadow-2xl ring-4 ring-brand/40">
+            <img
+              src={AVATAR_URL}
+              alt="John Developer"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
 

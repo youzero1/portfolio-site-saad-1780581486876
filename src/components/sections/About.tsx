@@ -1,5 +1,7 @@
 import { Download, MapPin, Calendar, Briefcase } from 'lucide-react';
 
+const AVATAR_URL = 'https://xjsyjqzrtpgndomemxcg.supabase.co/storage/v1/object/public/prompt-images/build-images/1780582237593-user1.jpeg';
+
 export default function About() {
   return (
     <section id="about" className="py-24 bg-surface-2">
@@ -10,11 +12,15 @@ export default function About() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-16 items-center">
-          {/* Left — image / avatar block */}
+          {/* Left — image block */}
           <div className="flex justify-center">
             <div className="relative">
-              <div className="w-64 h-64 rounded-3xl bg-gradient-to-br from-brand/40 to-accent/20 flex items-center justify-center text-7xl font-bold text-white shadow-2xl border border-white/10">
-                JD
+              <div className="w-64 h-64 rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+                <img
+                  src={AVATAR_URL}
+                  alt="John Developer"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="absolute -bottom-4 -right-4 bg-surface-3 rounded-2xl px-4 py-3 border border-white/10 shadow-xl">
                 <p className="text-xs text-slate-400">Experience</p>
