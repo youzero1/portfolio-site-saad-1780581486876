@@ -153,7 +153,7 @@ export default function TodoApp() {
           {filtered.map(todo => (
             <div
               key={todo.id}
-              className={`group flex items-center gap-3 bg-white/5 border rounded-xl px-4 py-3 transition-all hover:bg-white/8 ${
+              className={`group flex items-center gap-3 bg-white/5 border rounded-xl px-4 py-3 transition-all hover:bg-white/[0.08] ${
                 todo.completed ? 'border-white/5 opacity-60' : 'border-white/10'
               }`}
             >
